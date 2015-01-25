@@ -1,0 +1,21 @@
+{
+  "name": "jquery-ajaxreadystate",
+  "version": "1.0.0",
+  "description": "jQuery ajaxreadystate plugin",
+  "main": "src/jquery-ajaxreadystate.js",
+  "keywords": [
+    "jquery-plugin",
+    "readystate"
+  ],
+  "authors": [
+    "Alexander O'Mara"
+  ],
+  "license": "MPL 2.0",
+  "ignore": [
+    "**/.*",
+    "*.md",
+    "test",
+    "Gruntfile.js",
+    "package.json"
+  ]
+}

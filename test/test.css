@@ -1,0 +1,35 @@
+body {
+	background: #ddd;
+	color: #222;
+	font-family: sans-serif;
+	margin: 0;
+	padding: 0;
+}
+a {
+	color: #33e;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+a:visited {
+	color: #339;
+}
+ul {
+	padding: 0 0 0 1em;
+}
+pre {
+	line-height: 1em;
+	margin: 1em;
+}
+.code-wrap {
+	background: #bbb;
+	border: 1px solid #999;
+	height: 36em;
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
+	overflow-scrolling: touch;
+}
+.wrap {
+	margin: 2em;
+}
