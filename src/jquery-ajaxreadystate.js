@@ -1,12 +1,23 @@
 /*!
  * jquery-ajaxreadystate
- * @version 1.0.0
+ * @version 1.1.0
  * @author Alexander O'Mara
  * @copyright Copyright (c) 2015 Alexander O'Mara
  * @license MPL 2.0 <http://mozilla.org/MPL/2.0/>
  */
-/* global jQuery */
-(function($) {//'use strict';//jQuery cannot use this so neither can we.
+/* global jQuery, define, module, require */
+(function (factory) {
+	if (typeof define === 'function' && define.amd) {
+		define(['jquery'], factory);
+	}
+	else if (typeof exports === 'object') {
+		module.exports = factory(require('jquery'));
+	}
+	else {
+		factory(jQuery);
+	}
+}(function($) {
+	//'use strict';//jQuery cannot use this so neither can we.
 	$.ajaxreadystate = function(url, options) {
 		var
 			ret,
@@ -156,7 +167,7 @@
 		
 		//Do not replace the jQuery RSC handler if using event binding instead.
 		if (!eventBinding) {
-			//Try to copy an replace the core RSC handler (fails in IE6).
+			//Try to copy and replace the core RSC handler (fails in IE6).
 			try {
 				jqrsc = xhr.onreadystatechange;
 				xhr.onreadystatechange = rsc;
@@ -167,4 +178,4 @@
 		//Return the AJAX object.
 		return ret;
 	};
-})(jQuery);
+}));
